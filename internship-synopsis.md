@@ -1,10 +1,17 @@
 In the most plain and simple terms possible, the objective of our project was to build a Jupyter notebook extension that automates event-driven workflows.  
 This objective leaves us with a lot of questions, first being who might want to use this extension. 
-/n
+
 This development is intended for portfolio managers, researchers, and citizen developers who use Jupyter notebooks to run analytics on financial investment data to generate alpha on their portfolios.  Our project is configured via two Jupyter extensions that let users create events that trigger execution of specified piece of code every time a given endpoint is reached.   
 As an example, a researcher may want to run analytics on the average price of milk in each state at market close to measure inflation on basic consumer goods, and want to automate this process so that when that excel spreadsheet of data is dropped in a s3 bucket online, our code parses that spreadsheet to create an analytical eport of those findings to send to their clients.  
 The benefit of our project to this target user group then is the extent to which it can automate tasks and routine research conduction with support that ranges from simple, linear, real-time events to complex, multi-source events, with s3, webhook and custom events serving as examples.   
-/n
+
+Before diving into the project architecture and exploring how all the different parts came together, it's worth going over languages, frameworks and tools we used for this project. 
+We created frontend of our extensions using React framework, styling it with Material UI. This made our code more cohesive and our UI design uniform across different modals, windows and input fields. 
+We used Typescript and Python for the Jupyter frontend and backend respectively, and Golang for the backend server. 
+Postman was a really great tool that helped us, as we were building and testing our get and post requests, making sure that we are sending over the right format of the data and are able to successfully retrieve the objects we created from our Eventing configuration form.
+
+One can see the early version of our configuration extension designs in the attached powerpoint. Throughout our design process, we made many changes to the design and fields included in each modal, as we continued developing our frontend and altered the data we want for user to change and have access to. 
+
 Going into this project, it was very clear to us how automating user-driven events would improve efficiency and overall benefit those using the product. What we didn’t necessarily understand until completing the project is just how much automation reduces human error along the way, especially if the target user is not a programmer and well-versed in the upwards of 10 tools we needed to create this automated schema.  
 The project’s elaborate architecture really pushed us as engineers to develop a more robust understanding of the flow of data from end-to-end, since with all the moving parts of front-end typescript Jupyter extensions to the python jupyter backend to GRPC to go server to Kubernetes there are many places along the way errors can be introduced. 
 It is worth nothing as well how many new programming and languages we had to learn quickly for this project and how challenging that was for us at times. Nonetheless, this exposure only further helped us grow as programmers. 
