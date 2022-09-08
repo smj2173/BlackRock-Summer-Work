@@ -1,0 +1,22 @@
+In the most plain and simple terms possible, the objective of our project was to build a Jupyter notebook extension that automates event-driven workflows.  
+This objective leaves us with a lot of questions, first being who might want to use this extension. 
+/n
+This development is intended for portfolio managers, researchers, and citizen developers who use Jupyter notebooks to run analytics on financial investment data to generate alpha on their portfolios.  Our project is configured via two Jupyter extensions that let users create events that trigger execution of specified piece of code every time a given endpoint is reached.   
+As an example, a researcher may want to run analytics on the average price of milk in each state at market close to measure inflation on basic consumer goods, and want to automate this process so that when that excel spreadsheet of data is dropped in a s3 bucket online, our code parses that spreadsheet to create an analytical eport of those findings to send to their clients.  
+The benefit of our project to this target user group then is the extent to which it can automate tasks and routine research conduction with support that ranges from simple, linear, real-time events to complex, multi-source events, with s3, webhook and custom events serving as examples.   
+/n
+Going into this project, it was very clear to us how automating user-driven events would improve efficiency and overall benefit those using the product. What we didn’t necessarily understand until completing the project is just how much automation reduces human error along the way, especially if the target user is not a programmer and well-versed in the upwards of 10 tools we needed to create this automated schema.  
+The project’s elaborate architecture really pushed us as engineers to develop a more robust understanding of the flow of data from end-to-end, since with all the moving parts of front-end typescript Jupyter extensions to the python jupyter backend to GRPC to go server to Kubernetes there are many places along the way errors can be introduced. 
+It is worth nothing as well how many new programming and languages we had to learn quickly for this project and how challenging that was for us at times. Nonetheless, this exposure only further helped us grow as programmers. 
+To conclude, as we look to the future of our project, we are hopeful this extension will streamline event-driven workflows for our users and that the extension has the potential to accommodate different event-types other than s3 and webhook. 
+
+
+
+
+
+
+
+
+
+
+
